@@ -316,7 +316,7 @@ au BufNewFile,BufRead *.vim setlocal noet ts=4 sw=4 sts=4
 au BufNewFile,BufRead *.txt setlocal noet ts=4 sw=4
 au BufNewFile,BufRead *.md setlocal noet ts=4 sw=4
 au BufNewFile,BufRead *.yml,*.yaml setlocal expandtab ts=2 sw=2
-au BufNewFile,BufRead *.cpp setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.cpp,*.cc setlocal expandtab ts=2 sw=2 shiftwidth=4
 au BufNewFile,BufRead *.hpp setlocal expandtab ts=2 sw=2
 
 augroup filetypedetect
@@ -327,7 +327,7 @@ augroup END
 au FileType nginx setlocal noet ts=4 sw=4 sts=4
 
 " Go settings
-au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
+au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4 shiftwidth=4
 
 " scala settings
 autocmd BufNewFile,BufReadPost *.scala setl shiftwidth=2 expandtab
@@ -408,8 +408,8 @@ imap <C-b> <esc>:CtrlPCurWD<cr>
 nnoremap <leader>ga :Git add %:p<CR><CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gb :Gblame<CR>
 vnoremap <leader>gb :Gblame<CR>
-
 " ============== MiniBufExpl =====================
 
 "let g:miniBufExplMapWindowNavVim = 1
@@ -441,6 +441,7 @@ let g:go_highlight_build_constraints = 1
 au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
 au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>ii <Plug>(go-implements)
 au FileType go nmap <Leader>l <Plug>(go-metalinter)
 
 au FileType go nmap <leader>r  <Plug>(go-run)
@@ -449,6 +450,8 @@ au FileType go nmap <leader>b  <Plug>(go-build)
 au FileType go nmap <leader>t  <Plug>(go-test)
 au FileType go nmap <leader>dt  <Plug>(go-test-compile)
 au FileType go nmap <Leader>d <Plug>(go-doc)
+au FileType go nmap <Leader>c <Plug>(go-coverage)
+au FileType go nmap <Leader>cc <Plug>(go-coverage-clear)
 
 " I like these more!
 augroup go
