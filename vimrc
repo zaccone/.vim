@@ -242,6 +242,15 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Create tab
+map <leader>t :tabnew<CR>
+
+ " Fast saving
+ nmap <leader>w :w!<cr>
+
+" Highlight everything
+map <C-a> ggVG
+
 " Fast saving
 nmap <leader>w :w!<cr>
 
