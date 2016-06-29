@@ -242,9 +242,10 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Create tab
+" Manage tabs
 map <leader>t :tabnew<CR>
-
+nmap <leader>g :tabprevious<CR>
+nmap <leader>h :tabnext<CR>
  " Fast saving
  nmap <leader>w :w!<cr>
 
