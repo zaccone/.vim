@@ -448,8 +448,10 @@ let g:go_highlight_build_constraints = 1
 
 au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
+au FileType go nmap <Leader>tt <Plug>(go-def-tab)
 au FileType go nmap <Leader>i <Plug>(go-info)
 au FileType go nmap <Leader>ii <Plug>(go-implements)
+au FileType go nmap <Leader>de <Plug>(go-describe)
 au FileType go nmap <Leader>l <Plug>(go-metalinter)
 
 au FileType go nmap <leader>r  <Plug>(go-run)
@@ -460,6 +462,11 @@ au FileType go nmap <leader>dt  <Plug>(go-test-compile)
 au FileType go nmap <Leader>d <Plug>(go-doc)
 au FileType go nmap <Leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>cc <Plug>(go-coverage-clear)
+
+
+au FileType go nmap <Leader>cs <Plug>(go-callstack)
+au FileType go nmap <Leader>dc <Plug>(go-callees)
+au FileType go nmap <Leader>dcc <Plug>(go-callers)
 
 " I like these more!
 augroup go
