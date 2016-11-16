@@ -255,15 +255,15 @@ nmap <leader>w :w!<cr>
 
 " Center the screen
 nnoremap <space> zz
-
 " Move up and down on splitted lines (on small width screens)
-map <Up> gk
-map <Down> gj
-map k gk
-map j gj
+"nmap <Up> gk
+"nmap <Down> gj
+"nmap k gk
+"nmap j gj
 
 " Just go out in insert mode
-imap jk <ESC>l
+" Try typink 'Dijkstra' with that enabled :P
+"imap jk <ESC>l
 
 nnoremap <F6> :setlocal spell! spell?<CR>
 
@@ -634,5 +634,17 @@ autocmd BufWritePre * StripWhitespace
 map <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
 imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.8.py<cr>
 autocmd BufWritePre *.cpp,*.hpp pyf /usr/share/vim/addons/syntax/clang-format-3.8.py
+
+" ========= ack.vim  ======================
+let g:ackprg = 'ag --vimgrep --smart-case'
+cnoreabbrev ag Ack!
+cnoreabbrev aG Ack!
+cnoreabbrev Ag Ack!
+cnoreabbrev AG Ack!
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
+
+" You Complete Me plugin
+let g:ycm_min_num_of_chars_for_completion = 128
 
 " vim:ts=2:sw=2:et
