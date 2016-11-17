@@ -442,9 +442,12 @@ let g:go_highlight_space_tab_error = 0
 let g:go_highlight_array_whitespace_error = 0
 let g:go_highlight_trailing_whitespace_error = 0
 let g:go_highlight_extra_types = 0
+let g:go_highlight_types = 1
 let g:go_highlight_operators = 0
 let g:go_highlight_build_constraints = 1
-
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
 
 au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
@@ -467,6 +470,10 @@ au FileType go nmap <Leader>cc <Plug>(go-coverage-clear)
 au FileType go nmap <Leader>cs <Plug>(go-callstack)
 au FileType go nmap <Leader>dc <Plug>(go-callees)
 au FileType go nmap <Leader>dcc <Plug>(go-callers)
+
+
+au FileType go nmap <Leader>g <Plug>(go-def-stack)
+au FileType go nmap <C-[> <Plug>(go-def-pop)
 
 " I like these more!
 augroup go
@@ -645,6 +652,5 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 " You Complete Me plugin
-let g:ycm_min_num_of_chars_for_completion = 128
-
+let g:ycm_auto_trigger = 0
 " vim:ts=2:sw=2:et
