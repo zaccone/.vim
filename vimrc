@@ -650,7 +650,11 @@ cnoreabbrev Ag Ack!
 cnoreabbrev AG Ack!
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
-
 " You Complete Me plugin
 let g:ycm_auto_trigger = 0
-" vim:ts=2:sw=2:et
+
+" deocomplete
+if has('nvim')
+" had to disable due to bug in deoplete
+  let g:deoplete#enable_at_startup = 0
+endif
